@@ -81,6 +81,11 @@
     <Compile Include="Movy.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PeliculasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeliculasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PeliculasDetalle.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +96,12 @@
     </Compile>
     <Compile Include="RegistroCatForm.Designer.cs">
       <DependentUpon>RegistroCatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPeliculasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPeliculasForm.Designer.cs">
+      <DependentUpon>RegistroPeliculasForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -107,6 +118,9 @@
     <EmbeddedResource Include="RegistroCatForm.resx">
       <DependentUpon>RegistroCatForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPeliculasForm.resx">
+      <DependentUpon>RegistroPeliculasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="MovieModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MovieModel.Designer.cs</LastGenOutput>
@@ -115,6 +129,17 @@
       <DependentUpon>MovieModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PeliculasDataSet.xsc">
+      <DependentUpon>PeliculasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PeliculasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PeliculasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PeliculasDataSet.xss">
+      <DependentUpon>PeliculasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

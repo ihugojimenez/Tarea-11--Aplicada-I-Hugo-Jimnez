@@ -36,5 +36,11 @@ namespace PeliculasWindowsForms
             Rc.Show();
             
         }
+
+        private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegistroPeliculasForm RP = new RegistroPeliculasForm();
+            RP.Show();
+        }
     }
 }

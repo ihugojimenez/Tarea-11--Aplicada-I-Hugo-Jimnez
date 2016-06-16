@@ -36,7 +36,7 @@ namespace PeliculasWindowsForms
         {
             Movy m = new Movy()
             {
-                CategoriaId = Convert.ToInt32(DesctextBoxT.Text),
+                CategoriaId = Convert.ToInt32(IDCatTextBox.Text),
                 Descripcion = DesctextBoxT.Text
 
             };
