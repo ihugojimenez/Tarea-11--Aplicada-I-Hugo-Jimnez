@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace PeliculasWindowsForms
 {
-    public partial class ResgitroCatForm : Form
+    public partial class RegistroCatForm : Form
     {
         private PeliculasEntities db = new PeliculasEntities();
-        public ResgitroCatForm()
+        public RegistroCatForm()
         {
             InitializeComponent();
         }

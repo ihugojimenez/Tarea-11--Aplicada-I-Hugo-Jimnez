@@ -12,6 +12,7 @@ namespace PeliculasWindowsForms
 {
     public partial class MainForm : Form
     {
+        
         public MainForm()
         {
             InitializeComponent();
@@ -24,11 +25,15 @@ namespace PeliculasWindowsForms
 
         private void categoriaPeliculasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //MainForm mf = this;
+            RegistroCatForm Rc = new RegistroCatForm();
+            //Rc.MdiParent = mf;
+            Rc.Show();
             
         }
     }

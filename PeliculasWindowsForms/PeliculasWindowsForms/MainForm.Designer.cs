@@ -32,6 +32,8 @@
             this.pEliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaPeliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDePeliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,14 +45,15 @@
             this.pEliculasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(781, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(901, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // pEliculasToolStripMenuItem
             // 
             this.pEliculasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.categoriaPeliculasToolStripMenuItem});
+            this.categoriaPeliculasToolStripMenuItem,
+            this.registroDePeliculasToolStripMenuItem});
             this.pEliculasToolStripMenuItem.Name = "pEliculasToolStripMenuItem";
             this.pEliculasToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.pEliculasToolStripMenuItem.Text = "Peliculas";
@@ -59,10 +62,9 @@
             // categoriaPeliculasToolStripMenuItem
             // 
             this.categoriaPeliculasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.consultarToolStripMenuItem});
+            this.registrarToolStripMenuItem});
             this.categoriaPeliculasToolStripMenuItem.Name = "categoriaPeliculasToolStripMenuItem";
-            this.categoriaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.categoriaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.categoriaPeliculasToolStripMenuItem.Text = "Categoria Peliculas";
             this.categoriaPeliculasToolStripMenuItem.Click += new System.EventHandler(this.categoriaPeliculasToolStripMenuItem_Click);
             // 
@@ -72,6 +74,21 @@
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            // 
+            // registroDePeliculasToolStripMenuItem
+            // 
+            this.registroDePeliculasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem1,
+            this.consultarToolStripMenuItem});
+            this.registroDePeliculasToolStripMenuItem.Name = "registroDePeliculasToolStripMenuItem";
+            this.registroDePeliculasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.registroDePeliculasToolStripMenuItem.Text = "Registro de Peliculas";
+            // 
+            // registrarToolStripMenuItem1
+            // 
+            this.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1";
+            this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.registrarToolStripMenuItem1.Text = "Registrar";
             // 
             // consultarToolStripMenuItem
             // 
@@ -83,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 452);
+            this.ClientSize = new System.Drawing.Size(901, 506);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -101,6 +118,8 @@
         private System.Windows.Forms.ToolStripMenuItem pEliculasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriaPeliculasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDePeliculasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }
