@@ -33,8 +33,9 @@ namespace PeliculasWindowsForms
             };
             db1.PeliculasDetalles.Add(Pd);
             db1.SaveChanges();
+            LimpiarTexBox();
         } 
-
+        
         private void Eliminar(int n)
         {
             PeliculasDetalle pd = (from p in db1.PeliculasDetalles
@@ -42,6 +43,43 @@ namespace PeliculasWindowsForms
                                    select p).FirstOrDefault();
             db1.PeliculasDetalles.Remove(pd);
             db1.SaveChanges();
+            LimpiarTexBox();
+        }
+
+        private void LimpiarTexBox()
+        {
+            IdPeliTextBox.Clear();
+            IdCatTextBox.Clear();
+            TituloTextBox.Clear();
+            SipnosisTextBox.Clear();
+            CalTextBox.Clear();
+            AnoTextBox.Clear();
+            IdiomaTextBox.Clear();
+
+        }
+
+        private void Actualizar(int n)
+        {
+            PeliculasDetalle pd = (from p in db1.PeliculasDetalles
+                                   where p.IdPelicula == n
+                                   select p).FirstOrDefault();
+
+            pd.IdPelicula = Convert.ToInt32(IdPeliTextBox.Text);
+            pd.IdCategoria = Convert.ToInt32(IdCatTextBox.Text);
+            pd.Titulo = TituloTextBox.Text;
+            pd.Sipnosis = SipnosisTextBox.Text;
+            pd.Calificacion = CalTextBox.Text;
+            pd.Ano = AnoTextBox.Text;
+            pd.Idioma = IdiomaTextBox.Text;
+
+            db1.PeliculasDetalles.Add(pd);
+            db1.SaveChanges();
+            LimpiarTexBox();
+        }
+
+        private void buscar(int n)
+        {
+
         }
 
         private void RegistroPeliculasForm_Load(object sender, EventArgs e)
@@ -58,6 +96,7 @@ namespace PeliculasWindowsForms
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            AddMovie();
 
         }
     }
