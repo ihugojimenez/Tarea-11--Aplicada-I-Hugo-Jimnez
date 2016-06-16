@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace PeliculasWindowsForms
 {
-    public partial class Form1 : Form
+    public partial class ResgitroCatForm : Form
     {
-        public Form1()
+        
+        public ResgitroCatForm()
         {
             InitializeComponent();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResgitroCatForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
