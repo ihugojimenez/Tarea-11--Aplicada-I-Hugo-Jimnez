@@ -26,5 +26,10 @@ namespace PeliculasWindowsForms
         {
 
         }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

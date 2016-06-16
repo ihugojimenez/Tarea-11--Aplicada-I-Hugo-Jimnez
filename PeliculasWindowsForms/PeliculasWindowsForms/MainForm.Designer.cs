@@ -71,6 +71,7 @@
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             this.registrarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
