@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.PeliculasListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,21 +49,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Peliculas Registradas";
             // 
-            // listView1
+            // PeliculasListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PeliculasListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.Location = new System.Drawing.Point(17, 47);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(432, 215);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.PeliculasListView.Location = new System.Drawing.Point(17, 47);
+            this.PeliculasListView.Name = "PeliculasListView";
+            this.PeliculasListView.Size = new System.Drawing.Size(432, 215);
+            this.PeliculasListView.TabIndex = 1;
+            this.PeliculasListView.UseCompatibleStateImageBehavior = false;
+            this.PeliculasListView.View = System.Windows.Forms.View.Details;
+            this.PeliculasListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -108,10 +109,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 290);
             this.Controls.Add(this.SipnosisButton);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.PeliculasListView);
             this.Controls.Add(this.label1);
             this.Name = "ShowMoviesForm";
             this.Text = "Consultas de Peliculas";
+            this.Load += new System.EventHandler(this.ShowMoviesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +122,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView PeliculasListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

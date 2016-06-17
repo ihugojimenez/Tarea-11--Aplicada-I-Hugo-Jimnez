@@ -42,5 +42,16 @@ namespace PeliculasWindowsForms
             RegistroPeliculasForm RP = new RegistroPeliculasForm();
             RP.Show();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowMoviesForm SM = new ShowMoviesForm();
+            SM.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
