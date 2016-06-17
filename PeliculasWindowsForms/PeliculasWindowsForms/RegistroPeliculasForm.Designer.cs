@@ -49,6 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.IdiomaTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.SalidalistView = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataSet)).BeginInit();
             this.SuspendLayout();
@@ -210,11 +211,21 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // SalidalistView
+            // 
+            this.SalidalistView.Location = new System.Drawing.Point(17, 288);
+            this.SalidalistView.Name = "SalidalistView";
+            this.SalidalistView.Size = new System.Drawing.Size(409, 158);
+            this.SalidalistView.TabIndex = 17;
+            this.SalidalistView.UseCompatibleStateImageBehavior = false;
+            this.SalidalistView.View = System.Windows.Forms.View.Details;
+            // 
             // RegistroPeliculasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 449);
+            this.Controls.Add(this.SalidalistView);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.IdiomaTextBox);
             this.Controls.Add(this.label8);
@@ -261,5 +272,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox IdiomaTextBox;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.ListView SalidalistView;
     }
 }

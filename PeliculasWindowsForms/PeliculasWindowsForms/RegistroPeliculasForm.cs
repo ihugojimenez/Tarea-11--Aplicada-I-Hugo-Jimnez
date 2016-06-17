@@ -33,9 +33,11 @@ namespace PeliculasWindowsForms
             };
             db1.PeliculasDetalles.Add(Pd);
             db1.SaveChanges();
-            LimpiarTexBox();
-        } 
-        
+           
+        }
+
+       
+
         private void Eliminar(int n)
         {
             PeliculasDetalle pd = (from p in db1.PeliculasDetalles
@@ -43,20 +45,10 @@ namespace PeliculasWindowsForms
                                    select p).FirstOrDefault();
             db1.PeliculasDetalles.Remove(pd);
             db1.SaveChanges();
-            LimpiarTexBox();
+           
         }
 
-        private void LimpiarTexBox()
-        {
-            IdPeliTextBox.Clear();
-            IdCatTextBox.Clear();
-            TituloTextBox.Clear();
-            SipnosisTextBox.Clear();
-            CalTextBox.Clear();
-            AnoTextBox.Clear();
-            IdiomaTextBox.Clear();
-
-        }
+        
 
         private void Actualizar(int n)
         {
@@ -74,7 +66,7 @@ namespace PeliculasWindowsForms
 
             db1.PeliculasDetalles.Add(pd);
             db1.SaveChanges();
-            LimpiarTexBox();
+           
         }
 
         private void buscar(int n)
@@ -86,6 +78,7 @@ namespace PeliculasWindowsForms
         {
             // TODO: This line of code loads data into the 'peliculasDataSet.Movies' table. You can move, or remove it, as needed.
             this.moviesTableAdapter.Fill(this.peliculasDataSet.Movies);
+            
 
         }
 
