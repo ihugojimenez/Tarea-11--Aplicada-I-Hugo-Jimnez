@@ -50,6 +50,7 @@
             this.SipnosisButton.TabIndex = 2;
             this.SipnosisButton.Text = "Sipnosis";
             this.SipnosisButton.UseVisualStyleBackColor = true;
+            this.SipnosisButton.Click += new System.EventHandler(this.SipnosisButton_Click);
             // 
             // ShowMoviesForm
             // 
