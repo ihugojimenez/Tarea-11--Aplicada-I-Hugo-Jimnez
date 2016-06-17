@@ -54,6 +54,7 @@
             this.moviesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.EliminarButton = new System.Windows.Forms.Button();
             this.IdPeliculaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.UpdateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource1)).BeginInit();
@@ -256,11 +257,25 @@
             // 
             this.IdPeliculaErrorProvider.ContainerControl = this;
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.UpdateButton.Location = new System.Drawing.Point(292, 238);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(79, 64);
+            this.UpdateButton.TabIndex = 19;
+            this.UpdateButton.Text = "Actualizar";
+            this.UpdateButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
             // RegistroPeliculasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 315);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.SaveButton);
@@ -317,5 +332,6 @@
         private System.Windows.Forms.BindingSource moviesBindingSource1;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider IdPeliculaErrorProvider;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }

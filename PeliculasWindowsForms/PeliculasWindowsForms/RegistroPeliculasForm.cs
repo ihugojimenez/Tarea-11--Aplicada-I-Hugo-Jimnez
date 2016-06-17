@@ -22,6 +22,7 @@ namespace PeliculasWindowsForms
         {
             PeliculasDetalle Pd = new PeliculasDetalle()
             {
+
                 IdPelicula = Convert.ToInt32(IdPeliTextBox.Text),
                 IdCategoria = Convert.ToInt32(IdCatTextBox.Text),
                 Titulo = TituloTextBox.Text,
@@ -40,9 +41,11 @@ namespace PeliculasWindowsForms
 
         private void Eliminar(int n)
         {
+
             PeliculasDetalle pd = (from p in db1.PeliculasDetalles
                                    where p.IdPelicula == n
                                    select p).FirstOrDefault();
+
             db1.PeliculasDetalles.Remove(pd);
             db1.SaveChanges();
            
@@ -106,7 +109,7 @@ namespace PeliculasWindowsForms
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(IdPeliTextBox.Text))
+            if (string.IsNullOrEmpty(IdPeliTextBox.Text))
             {
                 IdPeliculaErrorProvider.SetError(IdPeliTextBox, "Favor especificar el ID de la pelicula que desea eliminar");
             }
@@ -115,7 +118,24 @@ namespace PeliculasWindowsForms
                 IdPeliculaErrorProvider.Clear();
                 Eliminar(Convert.ToInt32(IdPeliTextBox.Text));
             }
+
+            Limpiar();
             
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            
+            if (string.IsNullOrEmpty(IdPeliTextBox.Text))
+            {
+                IdPeliculaErrorProvider.SetError(IdPeliTextBox, "Favor especificar el ID de la pelicula que desea eliminar");
+            }
+            else
+            {
+                IdPeliculaErrorProvider.Clear();
+                Actualizar(Convert.ToInt32(IdPeliTextBox.Text));
+            }
+            Limpiar();
         }
     }
 }
