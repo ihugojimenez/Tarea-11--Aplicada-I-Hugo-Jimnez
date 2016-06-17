@@ -44,7 +44,7 @@ namespace PeliculasWindowsForms
 
         private void ShowMoviesForm_Load(object sender, EventArgs e)
         {
-            
+            mostrar();
         }
     }
 }
