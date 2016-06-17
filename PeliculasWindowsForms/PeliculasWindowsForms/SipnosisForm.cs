@@ -28,7 +28,7 @@ namespace PeliculasWindowsForms
                                    where p.IdPelicula == n
                                    select p).FirstOrDefault();
 
-            string aux = pd.Titulo + " " + pd.Sipnosis;
+            string aux = pd.Titulo + "  " + pd.Sipnosis;
             SalidaTextBox.Text = aux;
             
         }
