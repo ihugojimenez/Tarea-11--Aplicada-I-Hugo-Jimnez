@@ -55,8 +55,9 @@
             this.categoriaPeliculasToolStripMenuItem,
             this.registroDePeliculasToolStripMenuItem});
             this.pEliculasToolStripMenuItem.Name = "pEliculasToolStripMenuItem";
-            this.pEliculasToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.pEliculasToolStripMenuItem.Text = "Peliculas";
+            this.pEliculasToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.pEliculasToolStripMenuItem.Text = "Gestionar Peliculas";
+            this.pEliculasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.pEliculasToolStripMenuItem.Click += new System.EventHandler(this.pEliculasToolStripMenuItem_Click);
             // 
             // categoriaPeliculasToolStripMenuItem
@@ -107,8 +108,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1505, 701);
             this.Name = "MainForm";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Peliculas";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);

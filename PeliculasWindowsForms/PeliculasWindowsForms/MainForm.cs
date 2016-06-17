@@ -30,9 +30,9 @@ namespace PeliculasWindowsForms
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MainForm mf = this;
+           
             RegistroCatForm Rc = new RegistroCatForm();
-            //Rc.MdiParent = mf;
+            //Rc.MdiParent = this;
             Rc.Show();
             
         }
@@ -40,6 +40,7 @@ namespace PeliculasWindowsForms
         private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             RegistroPeliculasForm RP = new RegistroPeliculasForm();
+            //RP.MdiParent = this;
             RP.Show();
         }
 
