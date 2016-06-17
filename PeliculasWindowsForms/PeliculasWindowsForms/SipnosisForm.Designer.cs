@@ -33,8 +33,10 @@
             this.IdSearchTextBox = new System.Windows.Forms.TextBox();
             this.SipnosisListView = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SalidaTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,11 +57,15 @@
             // 
             // SipnosisListView
             // 
+            this.SipnosisListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.SipnosisListView.Location = new System.Drawing.Point(12, 96);
             this.SipnosisListView.Name = "SipnosisListView";
-            this.SipnosisListView.Size = new System.Drawing.Size(121, 168);
+            this.SipnosisListView.Size = new System.Drawing.Size(149, 168);
             this.SipnosisListView.TabIndex = 2;
             this.SipnosisListView.UseCompatibleStateImageBehavior = false;
+            this.SipnosisListView.View = System.Windows.Forms.View.Details;
             // 
             // button1
             // 
@@ -72,14 +78,7 @@
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(236, 96);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(296, 168);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -91,19 +90,38 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Sipnosis";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 26;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Titulo";
+            this.columnHeader2.Width = 99;
+            // 
+            // SalidaTextBox
+            // 
+            this.SalidaTextBox.Location = new System.Drawing.Point(265, 96);
+            this.SalidaTextBox.Multiline = true;
+            this.SalidaTextBox.Name = "SalidaTextBox";
+            this.SalidaTextBox.Size = new System.Drawing.Size(267, 168);
+            this.SalidaTextBox.TabIndex = 6;
+            // 
             // SipnosisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 288);
+            this.Controls.Add(this.SalidaTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SipnosisListView);
             this.Controls.Add(this.IdSearchTextBox);
             this.Controls.Add(this.label1);
             this.Name = "SipnosisForm";
             this.Text = "Sipnosis de Peliculas";
+            this.Load += new System.EventHandler(this.SipnosisForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +133,9 @@
         private System.Windows.Forms.TextBox IdSearchTextBox;
         private System.Windows.Forms.ListView SipnosisListView;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.TextBox SalidaTextBox;
     }
 }

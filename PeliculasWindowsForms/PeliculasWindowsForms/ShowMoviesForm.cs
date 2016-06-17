@@ -50,7 +50,8 @@ namespace PeliculasWindowsForms
 
         private void SipnosisButton_Click(object sender, EventArgs e)
         {
-
+            SipnosisForm Sf = new SipnosisForm();
+            Sf.Show();
         }
     }
 }
