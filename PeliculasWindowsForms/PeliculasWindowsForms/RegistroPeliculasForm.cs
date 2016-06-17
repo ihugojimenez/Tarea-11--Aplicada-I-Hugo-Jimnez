@@ -48,6 +48,16 @@ namespace PeliculasWindowsForms
            
         }
 
+        private void Limpiar()
+        {
+            IdPeliTextBox.Text = " ";
+            IdCatTextBox.Text = " ";
+            TituloTextBox.Text = " ";
+            SipnosisTextBox.Text = " ";
+            CalTextBox.Text = " ";
+            AnoTextBox.Text = " ";
+            IdiomaTextBox.Text = " ";
+        }
         
 
         private void Actualizar(int n)
@@ -90,7 +100,22 @@ namespace PeliculasWindowsForms
         private void SaveButton_Click(object sender, EventArgs e)
         {
             AddMovie();
+            Limpiar();
 
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(IdPeliTextBox.Text))
+            {
+                IdPeliculaErrorProvider.SetError(IdPeliTextBox, "Favor especificar el ID de la pelicula que desea eliminar");
+            }
+            else
+            {
+                IdPeliculaErrorProvider.Clear();
+                Eliminar(Convert.ToInt32(IdPeliTextBox.Text));
+            }
+            
         }
     }
 }

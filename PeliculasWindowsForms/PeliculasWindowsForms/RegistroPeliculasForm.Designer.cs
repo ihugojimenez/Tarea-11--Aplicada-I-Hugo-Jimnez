@@ -49,9 +49,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.IdiomaTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.SalidalistView = new System.Windows.Forms.ListView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.moviesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.moviesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.IdPeliculaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdPeliculaErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // moviesBindingSource
@@ -202,30 +209,60 @@
             // 
             this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveButton.Location = new System.Drawing.Point(365, 20);
+            this.SaveButton.Location = new System.Drawing.Point(365, 13);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(72, 54);
+            this.SaveButton.Size = new System.Drawing.Size(72, 61);
             this.SaveButton.TabIndex = 16;
             this.SaveButton.Text = "Guardar";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // SalidalistView
+            // comboBox1
             // 
-            this.SalidalistView.Location = new System.Drawing.Point(17, 288);
-            this.SalidalistView.Name = "SalidalistView";
-            this.SalidalistView.Size = new System.Drawing.Size(409, 158);
-            this.SalidalistView.TabIndex = 17;
-            this.SalidalistView.UseCompatibleStateImageBehavior = false;
-            this.SalidalistView.View = System.Windows.Forms.View.Details;
+            this.comboBox1.DataSource = this.moviesBindingSource2;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(13, 260);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(91, 24);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.ValueMember = "CategoriaId";
+            // 
+            // moviesBindingSource1
+            // 
+            this.moviesBindingSource1.DataMember = "Movies";
+            this.moviesBindingSource1.DataSource = this.peliculasDataSet;
+            // 
+            // moviesBindingSource2
+            // 
+            this.moviesBindingSource2.DataMember = "Movies";
+            this.moviesBindingSource2.DataSource = this.peliculasDataSet;
+            // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EliminarButton.Location = new System.Drawing.Point(412, 238);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(71, 65);
+            this.EliminarButton.TabIndex = 18;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // IdPeliculaErrorProvider
+            // 
+            this.IdPeliculaErrorProvider.ContainerControl = this;
             // 
             // RegistroPeliculasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 449);
-            this.Controls.Add(this.SalidalistView);
+            this.ClientSize = new System.Drawing.Size(505, 315);
+            this.Controls.Add(this.EliminarButton);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.IdiomaTextBox);
             this.Controls.Add(this.label8);
@@ -247,6 +284,9 @@
             this.Load += new System.EventHandler(this.RegistroPeliculasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdPeliculaErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +312,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox IdiomaTextBox;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.ListView SalidalistView;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource moviesBindingSource2;
+        private System.Windows.Forms.BindingSource moviesBindingSource1;
+        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.ErrorProvider IdPeliculaErrorProvider;
     }
 }
