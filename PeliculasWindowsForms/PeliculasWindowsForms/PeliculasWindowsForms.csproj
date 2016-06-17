@@ -103,6 +103,18 @@
     <Compile Include="RegistroPeliculasForm.Designer.cs">
       <DependentUpon>RegistroPeliculasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowMoviesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMoviesForm.Designer.cs">
+      <DependentUpon>ShowMoviesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SipnosisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SipnosisForm.Designer.cs">
+      <DependentUpon>SipnosisForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroPeliculasForm.resx">
       <DependentUpon>RegistroPeliculasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMoviesForm.resx">
+      <DependentUpon>ShowMoviesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SipnosisForm.resx">
+      <DependentUpon>SipnosisForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="MovieModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

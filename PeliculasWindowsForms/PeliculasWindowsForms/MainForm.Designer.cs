@@ -64,7 +64,7 @@
             this.categoriaPeliculasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem});
             this.categoriaPeliculasToolStripMenuItem.Name = "categoriaPeliculasToolStripMenuItem";
-            this.categoriaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.categoriaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.categoriaPeliculasToolStripMenuItem.Text = "Categoria Peliculas";
             this.categoriaPeliculasToolStripMenuItem.Click += new System.EventHandler(this.categoriaPeliculasToolStripMenuItem_Click);
             // 
@@ -81,8 +81,8 @@
             this.registrarToolStripMenuItem1,
             this.consultarToolStripMenuItem});
             this.registroDePeliculasToolStripMenuItem.Name = "registroDePeliculasToolStripMenuItem";
-            this.registroDePeliculasToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.registroDePeliculasToolStripMenuItem.Text = "Registro de Peliculas";
+            this.registroDePeliculasToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.registroDePeliculasToolStripMenuItem.Text = "Detalles de Peliculas";
             // 
             // registrarToolStripMenuItem1
             // 
