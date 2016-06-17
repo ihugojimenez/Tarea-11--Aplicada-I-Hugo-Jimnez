@@ -87,7 +87,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(189, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 61);
+            this.button1.Size = new System.Drawing.Size(75, 62);
             this.button1.TabIndex = 3;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

@@ -295,7 +295,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistroPeliculasForm";
-            this.Text = "RegistroPeliculasForm";
+            this.Text = "Registro de Peliculas";
             this.Load += new System.EventHandler(this.RegistroPeliculasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.moviesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataSet)).EndInit();
