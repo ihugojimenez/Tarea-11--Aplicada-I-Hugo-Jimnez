@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SipnosisForm));
             this.label1 = new System.Windows.Forms.Label();
             this.IdSearchTextBox = new System.Windows.Forms.TextBox();
             this.SipnosisListView = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SalidaTextBox = new System.Windows.Forms.TextBox();
+            this.NullTextIdErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.NullTextIdErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +57,7 @@
             this.IdSearchTextBox.Name = "IdSearchTextBox";
             this.IdSearchTextBox.Size = new System.Drawing.Size(120, 22);
             this.IdSearchTextBox.TabIndex = 1;
+            this.IdSearchTextBox.TextChanged += new System.EventHandler(this.IdSearchTextBox_TextChanged);
             // 
             // SipnosisListView
             // 
@@ -66,6 +70,16 @@
             this.SipnosisListView.TabIndex = 2;
             this.SipnosisListView.UseCompatibleStateImageBehavior = false;
             this.SipnosisListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 26;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Titulo";
+            this.columnHeader2.Width = 99;
             // 
             // button1
             // 
@@ -90,16 +104,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Sipnosis";
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 26;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Titulo";
-            this.columnHeader2.Width = 99;
-            // 
             // SalidaTextBox
             // 
             this.SalidaTextBox.Location = new System.Drawing.Point(265, 96);
@@ -107,6 +111,10 @@
             this.SalidaTextBox.Name = "SalidaTextBox";
             this.SalidaTextBox.Size = new System.Drawing.Size(267, 168);
             this.SalidaTextBox.TabIndex = 6;
+            // 
+            // NullTextIdErrorProvider
+            // 
+            this.NullTextIdErrorProvider.ContainerControl = this;
             // 
             // SipnosisForm
             // 
@@ -122,6 +130,7 @@
             this.Name = "SipnosisForm";
             this.Text = "Sipnosis de Peliculas";
             this.Load += new System.EventHandler(this.SipnosisForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.NullTextIdErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +146,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.TextBox SalidaTextBox;
+        private System.Windows.Forms.ErrorProvider NullTextIdErrorProvider;
     }
 }

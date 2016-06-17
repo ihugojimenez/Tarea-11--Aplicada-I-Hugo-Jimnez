@@ -53,7 +53,23 @@ namespace PeliculasWindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Mostrar(Convert.ToInt32(IdSearchTextBox.Text));
+            if (string.IsNullOrEmpty(IdSearchTextBox.Text))
+            {
+                NullTextIdErrorProvider.SetError(IdSearchTextBox, "No puede estar vacio");
+            }
+            else
+            {
+                NullTextIdErrorProvider.Clear();
+                Mostrar(Convert.ToInt32(IdSearchTextBox.Text));
+            }
+                
+       
+            
+        }
+
+        private void IdSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
