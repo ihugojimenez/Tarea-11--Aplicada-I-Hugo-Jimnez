@@ -30,6 +30,8 @@ namespace PeliculasWindowsForms
                 ListViewItem ilv = PeliculasCatListView.Items.Add(item.CategoriaId.ToString());
                 ilv.SubItems.Add(item.Descripcion);
             }
+
+            
         }
 
         private void Agregar()
@@ -66,7 +68,17 @@ namespace PeliculasWindowsForms
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            Agregar();
+            if (string.IsNullOrEmpty(DesctextBoxT.Text))
+            {
+                DetalleCategoriaErrorProvider.SetError(DesctextBoxT, "Favor especificar el detalle de la Categoria que desea registrar");
+            }
+            else
+            {
+                DetalleCategoriaErrorProvider.Clear();
+                Agregar();
+
+            }
+
 
         }
 

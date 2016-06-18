@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCatForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.IDCatTextBox = new System.Windows.Forms.TextBox();
             this.DesctextBoxT = new System.Windows.Forms.TextBox();
             this.PeliculasCatListView = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.DetalleCategoriaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCategoriaErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +67,7 @@
             // 
             this.IDCatTextBox.Location = new System.Drawing.Point(117, 46);
             this.IDCatTextBox.Name = "IDCatTextBox";
+            this.IDCatTextBox.ReadOnly = true;
             this.IDCatTextBox.Size = new System.Drawing.Size(49, 22);
             this.IDCatTextBox.TabIndex = 2;
             // 
@@ -86,15 +90,6 @@
             this.PeliculasCatListView.UseCompatibleStateImageBehavior = false;
             this.PeliculasCatListView.View = System.Windows.Forms.View.Details;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Categorias Registradas";
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "ID";
@@ -104,6 +99,15 @@
             // 
             this.columnHeader2.Text = "Descripcion";
             this.columnHeader2.Width = 106;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Categorias Registradas";
             // 
             // SaveButton
             // 
@@ -118,7 +122,11 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // ResgitroCatForm
+            // DetalleCategoriaErrorProvider
+            // 
+            this.DetalleCategoriaErrorProvider.ContainerControl = this;
+            // 
+            // RegistroCatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,9 +139,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "ResgitroCatForm";
+            this.Name = "RegistroCatForm";
             this.Text = "ResgitroCatForm";
             this.Load += new System.EventHandler(this.ResgitroCatForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCategoriaErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +159,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.ErrorProvider DetalleCategoriaErrorProvider;
     }
 }
